@@ -4,12 +4,12 @@ import { Devices, UsedTractorList } from "../../../shared/constant";
 import CommonCarousel from "../../common/carousel";
 export const TractCard = ({ tract, className }) => {
   return (
-    <div
-      className={`w-72 relative overflow-hidden rounded-2xl md:${className}`}
-    >
-      <img src={tract?.image} alt="" className="w-72 max-w-fit" />
-      <div className="absolute top-4 bg-[linear-gradient(90deg,_rgba(5,92,18,1)_0%,_rgba(0,130,17,1)_30%,_rgba(137,195,143,1)_46%,_rgba(0,140,21,1)_62%,_rgba(9,115,28,1)_100%)] py-2 w-64 text-white text-xs font-semibold text-center rotate-[-40deg] -left-[5.95rem] ">
-        For Sell
+    <div className={`w-72 rounded-2xl md:${className}`}>
+      <div className="overflow-hidden relative">
+        <img src={tract?.image} alt="" className="w-72 max-w-fit" />
+        <div className="absolute top-4 bg-[linear-gradient(90deg,_rgba(5,92,18,1)_0%,_rgba(0,130,17,1)_30%,_rgba(137,195,143,1)_46%,_rgba(0,140,21,1)_62%,_rgba(9,115,28,1)_100%)] py-2 w-64 text-white text-xs font-semibold text-center rotate-[-40deg] -left-[5.95rem] ">
+          For Sell
+        </div>
       </div>
       <div className="bg-white px-2 py-3 w:64 md:w-72  ">
         <div className=" px-2">
