@@ -3,7 +3,7 @@ import NavData from "../navData";
 const MobileNav = () => {
   const { navData } = NavData || {};
   return (
-    <div className="flex items-center overflow-x-auto gap-3 ml-5">
+    <div className="flex items-center overflow-x-auto gap-3 ml-5 mb-2">
       {navData?.map(
         (navObj, index) =>
           index !== 0 && (
