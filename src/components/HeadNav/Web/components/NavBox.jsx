@@ -54,9 +54,9 @@ const NavBox = ({
             index === navDataArr?.length - 3
               ? "-right-3/4"
               : index === navDataArr?.length - 2
-              ? "-right-[90%] hidden"
+              ? "-right-[90%] "
               : index === navDataArr?.length - 1
-              ? "-right-[92%] hidden "
+              ? "-right-[92%]  "
               : "-left-1"
           }`}
         >
