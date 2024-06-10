@@ -66,7 +66,7 @@ const CommonCarousel = ({ children }) => {
         autoPlaySpeed={1000}
         keyBoardControl={true}
         deviceType={DeviceData}
-        customTransition="all .5"
+        // customTransition="all .5"
         transitionDuration={300}
         renderButtonGroupOutside
         renderDotsOutside
@@ -74,7 +74,7 @@ const CommonCarousel = ({ children }) => {
         arrows={false}
         customButtonGroup={<ButtonGroup />}
         dotListClass="custom-dot-list-style "
-        itemClass="carousel-item-padding-40-px h-max "
+        itemClass=" h-max "
       >
         {children}
       </Carousel>

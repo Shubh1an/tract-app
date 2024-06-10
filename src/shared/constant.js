@@ -115,22 +115,6 @@ export const PopularTractorList = [
     cylinder: 3,
     liftingCapacity: 2000,
   },
-  {
-    name: "Massey Ferguson 6026 MaxPro Wide Track tractor",
-    image: PopularTractor,
-    mobileImg: PopularTractSmallImg,
-    hp: 47,
-    cylinder: 3,
-    liftingCapacity: 2000,
-  },
-  {
-    name: "Massey Ferguson 6026 MaxPro Wide Track tractor",
-    image: PopularTractor,
-    mobileImg: PopularTractSmallImg,
-    hp: 47,
-    cylinder: 3,
-    liftingCapacity: 2000,
-  },
 ];
 export const MiniTractorList = [
   {
@@ -165,22 +149,6 @@ export const MiniTractorList = [
     cylinder: 3,
     liftingCapacity: 2000,
   },
-  {
-    name: "Massey Ferguson 6026 MaxPro Wide Track tractor",
-    image: MiniTractor,
-    mobileImg: PopularTractSmallImg,
-    hp: 47,
-    cylinder: 3,
-    liftingCapacity: 2000,
-  },
-  {
-    name: "Massey Ferguson 6026 MaxPro Wide Track tractor",
-    image: MiniTractor,
-    mobileImg: PopularTractSmallImg,
-    hp: 47,
-    cylinder: 3,
-    liftingCapacity: 2000,
-  },
 ];
 export const LatestTractorList = [
   {
@@ -195,32 +163,8 @@ export const LatestTractorList = [
   {
     image: LatestTractor,
   },
-  {
-    image: LatestTractor,
-  },
-  {
-    image: LatestTractor,
-  },
 ];
 export const UsedTractorList = [
-  {
-    name: "Massey Ferguson 6026 MaxPro Wide Track tractor",
-    image: UsedTractor,
-    location: "Swargate, Pune 411042",
-    mobileImg: PopularTractSmallImg,
-    hp: 47,
-    year: 2019,
-    price: "2.3 lacs",
-  },
-  {
-    name: "Massey Ferguson 6026 MaxPro Wide Track tractor",
-    image: UsedTractor,
-    location: "Swargate, Pune 411042",
-    mobileImg: PopularTractSmallImg,
-    hp: 47,
-    year: 2019,
-    price: "2.3 lacs",
-  },
   {
     name: "Massey Ferguson 6026 MaxPro Wide Track tractor",
     image: UsedTractor,

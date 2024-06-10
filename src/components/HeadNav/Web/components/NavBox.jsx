@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 import DownIconSvg from "../../../../assets/icons/downIconSvg";
 
-const NavBox = ({ imgPath, showDropDown = true, title, index, navData }) => {
+const NavBox = ({
+  imgPath,
+  showDropDown = true,
+  title,
+  index,
+  navData,
+  navDataArr,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const nav_box = document.getElementById(`nav-box${index}`);
@@ -23,7 +30,7 @@ const NavBox = ({ imgPath, showDropDown = true, title, index, navData }) => {
       }`}
     >
       <div className="border rounded-xl grid place-content-center w-12 h-12 mx-auto">
-        <img src={imgPath} alt="img" />
+        <img src={imgPath} alt="img" className="object-cover" />
       </div>
       <p className="text-gray-400 bg-b font-bold flex items-center mt-2 gap-1 text-sm ">
         <span
@@ -42,7 +49,17 @@ const NavBox = ({ imgPath, showDropDown = true, title, index, navData }) => {
         )}
       </p>
       {isOpen && showDropDown && (
-        <div className="absolute bg-white top-[105%]  grid grid-cols-2 rounded-lg w-max gap-2 border -left-1 p-3 z-10">
+        <div
+          className={`absolute bg-white top-[105%]  grid grid-cols-2 rounded-lg w-max gap-2 border  p-3 z-10 ${
+            index === navDataArr?.length - 3
+              ? "-right-3/4"
+              : index === navDataArr?.length - 2
+              ? "-right-[90%] hidden"
+              : index === navDataArr?.length - 1
+              ? "-right-[92%] hidden "
+              : "-left-1"
+          }`}
+        >
           {navData?.map((nav) => (
             <div className="flex gap-2 items-center" key={nav?.path}>
               <img src={nav?.path} alt={"img"} />

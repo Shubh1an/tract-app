@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import RightWhiteArrowIcon from "../../../assets/icons/rightWhiteArrowSvg";
 import { Devices, PopularTractorList } from "../../../shared/constant";
 
@@ -17,7 +17,7 @@ export const TractCard = ({ tract, index }) => {
         src={tract?.image}
         alt="img"
       />
-      <div className="flex items-center w-64 justify-around py-2 px-2 rounded-md text-xs bg-[#c0ebc0]">
+      <div className="flex items-center w-[95%] mx-auto justify-around py-2 px-2 rounded-md text-xs bg-[#c0ebc0]">
         <div className="grid place-content-center text-center">
           <p className="text-gray-400 ">HP</p>
           <p className="text-black text-base font-bold">{tract?.hp}</p>
@@ -40,11 +40,30 @@ export const TractCard = ({ tract, index }) => {
 };
 const PopularTractList = ({ device }) => {
   const [activeCard, setActiveCard] = useState(0);
+
+  const scrollToElement = (e) => {
+    scrollIntoViewHorizontally(e.currentTarget, e.target);
+  };
+
+  const scrollIntoViewHorizontally = (container, child) => {
+    const child_offsetRight = child.offsetLeft + child.offsetWidth;
+    const container_scrollRight = container.scrollLeft + container.offsetWidth;
+    console.log(container.scrollLeft, child.offsetLeft);
+
+    if (container.scrollLeft > child.offsetLeft) {
+      container.scrollLeft = child.offsetLeft;
+      return;
+    }
+
+    if (container_scrollRight < child_offsetRight) {
+      container.scrollLeft += child_offsetRight - container_scrollRight;
+    }
+  };
   return (
     <>
       {device >= Devices.Mobile ? (
         <div className="w-full overflow-x-hidden">
-          <div className="flex items-center gap-3 justify-between mt-5 overflow-x-auto w-[99%]">
+          <div className="flex items-center gap-3 justify-between mt-5 overflow-x-auto w-[99%] custom-scrollbar">
             {PopularTractorList.map((tract, index) => (
               <TractCard
                 key={tract?.name + index}
@@ -62,14 +81,21 @@ const PopularTractList = ({ device }) => {
               index={activeCard}
             />
           </div>
-          <div className="flex items-center overflow-x-auto gap-2 ml-5 w-full py-1">
+          <div
+            onClick={(e) => scrollToElement(e)}
+            className="flex items-center overflow-x-scroll gap-2 ml-5 w-full py-1 custom-scrollbar-mobile"
+          >
             {PopularTractorList.map((tract, index) => (
               <button
-                onClick={() => setActiveCard(index)}
+                // ref={divRef}
+                onClick={(e) => {
+                  setActiveCard(index);
+                }}
+                className="tab"
                 key={tract?.name + index}
               >
                 <div
-                  className={`w-[102px] aspect-[3/2] grid place-content-center border rounded-md hover:cursor-pointer ${
+                  className={`w-[102px] aspect-[3/2] grid place-content-center border rounded-md hover:cursor-pointer ml-2 ${
                     activeCard === index ? "border-green-400 scale-110" : ""
                   }`}
                 >

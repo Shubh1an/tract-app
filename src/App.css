@@ -27,3 +27,19 @@ input[type="checkbox"] {
 .react-multi-carousel-dot--active button {
   background-color: #46aa48 !important;
 }
+
+.custom-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.custom-scrollbar::-webkit-scrollbar {
+  height: 0; /* Safari and Chrome */
+}
+.custom-scrollbar-mobile::-webkit-scrollbar {
+  height: 1px; /* Safari and Chrome */
+  /* background-color: red; */
+}
+.carousel-item-padding-40-px {
+  /* width: max-content !important; */
+  width: fit-content !important;
+}

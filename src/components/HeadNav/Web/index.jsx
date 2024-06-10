@@ -14,6 +14,7 @@ const WebNav = () => {
             title={navObj?.title}
             index={index}
             navData={navObj?.categoryData}
+            navDataArr={navData}
           />
         ))}
       </div>

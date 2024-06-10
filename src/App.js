@@ -21,7 +21,7 @@ function App() {
   return (
     <div>
       <Header device={width} />
-      <div className="mt-24 md:mt-20">
+      <div className="mt-24 md:mt-16">
         {width <= Devices.Mobile && (
           <div className="w-11/12 mx-auto my-3 mt-32">
             <LocationMobileComponent />

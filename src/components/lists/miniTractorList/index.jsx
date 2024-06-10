@@ -10,17 +10,15 @@ export const TractCard = ({ tract, index, className }) => {
   return (
     <div className="py-8">
       <div
-        className={`rounded-lg border p-4  relative w-72 sm:mb-8 md:mb-0  pb-9 `}
+        className={`rounded-lg border p-4 md:max-w-72  relative  sm:mb-8 md:mb-0  pb-9 grid place-items-center shadow-xl`}
       >
         <img
           className="object-contain mb-2 mx-auto"
           src={tract?.image}
           alt="img"
         />
-        <p className="text-center font-semibold mb-2  w-64 mx-auto">
-          {tract?.name}
-        </p>
-        <div className="flex absolute top-[90%] items-center w-60 md:w-64 justify-around py-2 px-2 rounded-md text-xs bg-[#c0ebc0]">
+        <p className="text-center font-semibold mb-2  mx-auto">{tract?.name}</p>
+        <div className="flex absolute  top-[90%] items-center w-[80%]  justify-around py-2 px-2 rounded-md text-xs bg-[#c0ebc0]">
           <div className="grid place-content-center text-center">
             <p className="text-gray-400 ">HP</p>
             <p className="text-black text-base font-bold">{tract?.hp}</p>
@@ -47,7 +45,7 @@ const MiniTractList = ({ device }) => {
     <>
       {device >= Devices.Mobile ? (
         <div className="w-full overflow-hidden  mt-3">
-          <div className="flex items-center gap-3 justify-between mt-5 overflow-x-auto  w-[99%]">
+          <div className="flex items-center gap-3 justify-between mt-5 overflow-x-auto  w-[99%] custom-scrollbar">
             {MiniTractorList.map((tract, index) => (
               <TractCard
                 key={tract?.name + index}

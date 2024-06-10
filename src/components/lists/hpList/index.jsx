@@ -54,10 +54,10 @@ const HpList = ({ device }) => {
   return (
     <>
       {device >= Devices.Mobile ? (
-        <div className="grid grid-cols-auto-fit-100 mt-5 justify-between items-center gap-4 overflow-hidden">
+        <div className="grid grid-cols-auto-fit-100 mt-5 justify-between items-center gap-4 overflow-hidden custom-scrollbar">
           {HPData.map((data, index) => (
             <div
-              className="bg-white rounded-xl shadow-[0px 4px 5px 0px #afadad] py-5 w-48 grid place-content-center"
+              className="bg-white rounded-xl shadow-[0px 4px 5px 0px #afadad] py-5   grid place-content-center "
               key={data?.title + index}
             >
               <p className="text-xs text-gray-400 mb-1 text-center">HP</p>
@@ -72,7 +72,7 @@ const HpList = ({ device }) => {
         // <div className="flex  mt-5 justify-between items-center gap-4 overflow-hidden">
         <div className="relative">
           <Carousel
-            className="mt-5 relative"
+            className="mt-5 relative gap-5"
             swipeable={false}
             draggable={false}
             rewindWithAnimation
@@ -84,26 +84,27 @@ const HpList = ({ device }) => {
             autoPlaySpeed={1000}
             keyBoardControl={true}
             deviceType={DeviceData}
-            customTransition="all .5"
+            // customTransition="all ."
             transitionDuration={300}
+            additionalTransfrom={-30}
             renderButtonGroupOutside
             renderDotsOutside
             containerClass="carousel-container"
             arrows={false}
             customButtonGroup={<ButtonGroup />}
             dotListClass="custom-dot-list-style "
-            itemClass="carousel-item-padding-40-px"
+            itemClass="carousel-item-padding-40-px  mr-2 "
           >
             {HPDataMobile.map((data, index) => (
-              <div className="space-y-3" key={data?.title1 + index}>
-                <div className="bg-white rounded-xl shadow-2xl py-5 w-48 grid place-content-center">
+              <div className="space-y-3 w-fit" key={data?.title1 + index}>
+                <div className="bg-white rounded-xl shadow-2xl py-5 w-[100px] grid place-content-center">
                   <p className="text-xs text-gray-400 mb-1 text-center">HP</p>
                   <p className="text-base text-black font-semibold">
                     {data?.title1}
                   </p>
                 </div>
                 {data?.title2 && (
-                  <div className="bg-white rounded-xl shadow-2xl py-5 w-48 grid place-content-center">
+                  <div className="bg-white rounded-xl shadow-2xl py-5 w-[100px] grid place-content-center">
                     <p className="text-xs text-gray-400 mb-1 text-center">HP</p>
                     <p className="text-base text-black font-semibold">
                       {data?.title2}
