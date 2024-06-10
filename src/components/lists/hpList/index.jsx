@@ -86,7 +86,7 @@ const HpList = ({ device }) => {
             deviceType={DeviceData}
             // customTransition="all ."
             transitionDuration={300}
-            additionalTransfrom={-30}
+            additionalTransfrom={10}
             renderButtonGroupOutside
             renderDotsOutside
             containerClass="carousel-container"
@@ -97,14 +97,14 @@ const HpList = ({ device }) => {
           >
             {HPDataMobile.map((data, index) => (
               <div className="space-y-3 w-fit" key={data?.title1 + index}>
-                <div className="bg-white rounded-xl shadow-2xl py-5 w-[100px] grid place-content-center">
+                <div className="bg-white rounded-xl shadow-2xl py-5 w-[150px] grid place-content-center">
                   <p className="text-xs text-gray-400 mb-1 text-center">HP</p>
                   <p className="text-base text-black font-semibold">
                     {data?.title1}
                   </p>
                 </div>
                 {data?.title2 && (
-                  <div className="bg-white rounded-xl shadow-2xl py-5 w-[100px] grid place-content-center">
+                  <div className="bg-white rounded-xl shadow-2xl py-5 w-[150px] grid place-content-center">
                     <p className="text-xs text-gray-400 mb-1 text-center">HP</p>
                     <p className="text-base text-black font-semibold">
                       {data?.title2}

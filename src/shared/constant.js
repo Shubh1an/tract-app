@@ -79,7 +79,7 @@ export const HPDataMobile = [
 
   { title1: "46-50", title2: "51-55" },
 
-  { title1: "56-60" },
+  { title1: "56-60", title2: "51-55" },
 ];
 
 export const PopularTractorList = [

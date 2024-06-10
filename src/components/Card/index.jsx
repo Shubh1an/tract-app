@@ -8,7 +8,7 @@ const CardComponent = ({
 }) => {
   return (
     <div className={`p-3 px-6 sm:px-16  ${className} relative`}>
-      <p className="border-b-[3px] border-green-700 text-2xl text-black w-fit font-bold">
+      <p className="border-b-[3px] border-green-700 text-lg md:text-2xl text-black w-fit font-bold">
         {headTitle}
       </p>
       {children}
